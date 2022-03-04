@@ -5,8 +5,8 @@
 /***************************/
 
 import { recipes } from './modules/recipes.js'
-console.log(recipes)
-  
+
+ 
 function recipeFactory (data) {
     const {name, ingredients, time, description} = data
   
@@ -40,7 +40,7 @@ function recipeFactory (data) {
         const flexClass = ['d-flex', 'flex-row', 'justify-content-between']
 
         const article = document.createElement('article')
-        article.classList.add('card', 'm-5')
+        article.classList.add('card', 'ml-1', 'mt-5')
 
         const img = document.createElement('img')
         img.classList.add('card-img-top')
@@ -76,17 +76,35 @@ function recipeFactory (data) {
         const sectionList = document.createElement('div')
         sectionList.classList.add('list-section')
 
-        const ingredientList = document.createElement('ul')
+        const ingredientList = document.createElement('div')
         ingredientList.classList.add('ingredient-list')
         
         // line.textContent = ingredients[0].quantity //quantités
         // strong.textContent = ingredients[0].ingredient  // ingredient
         ingredients.forEach(ingredient => {
-            const line = document.createElement('li')
-            line.textContent = ingredient.quantity
+            const line = document.createElement('div')
+            line.classList.add('d-flex', "flex-row", 'ingredient-line')
             const strong = document.createElement('strong')
             strong.textContent = ingredient.ingredient
-            line.appendChild(strong)
+            const qte = document.createElement('p')        
+
+            if(ingredient.quantity ) {
+                // if(ingredient.unit) {
+                //     qte.textContent = `: ${ingredient.quantity}`+ ' ' + ingredient.unit
+                // } else {
+                    qte.textContent = `: ${ingredient.quantity}`
+                // }  
+            }
+            if(ingredient.quantite) {
+                // if(ingredient.unit) {
+                // qte.textContent = `: ${ingredient.quantite}` + ' ' + ingredient.unit
+                // } else {
+                    qte.textContent = `: ${ingredient.quantite}`
+                // }
+            }
+            
+            
+            line.append(strong, qte)
             ingredientList.appendChild(line)
         });      
 
