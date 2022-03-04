@@ -3,40 +3,12 @@
 /**** DOM Recipes Cards ****/
 /***************************/
 /***************************/
-
-import { recipes } from './modules/recipes.js'
-
  
-function recipeFactory (data) {
+export function recipeFactory (data) {
     const {name, ingredients, time, description} = data
   
     function getRecipeCardDOM () {
 
-        // <article class="card m-5">
-        // <img class="card-img-top" alt="Card image cap">
-        // <div class="card-body">
-
-        // <div class="d-flex flex-row justify-content-between">
-        //     <h2 class="card-title h5">Card title</h2>
-        //     <div class="d-flex flex-row clock-section">
-        //         <span class="far fa-clock mt-1 h5"></span>
-        //         <p class="h5 font-weight-bold">min</p>
-        //     </div>
-        // </div>
-
-        // <div class="d-flex flex-row justify-content-between recipe-section">
-        //     <div class="list-section">
-        //         <ul class="ingredient-list">
-        //             <li> <strong>ingredient : </strong>qte </li>
-        //             <li> <strong>ingredient : </strong>qte </li>
-        //             <li> <strong>ingredient : </strong>qte </li>
-        //             <li> <strong>ingredient : </strong>qte </li>
-        //         </ul>
-        //     </div>
-        //     <p class="card-text recipe-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        // </div>
-    //     </div>
-    // </article>
         const flexClass = ['d-flex', 'flex-row', 'justify-content-between']
 
         const article = document.createElement('article')
@@ -103,7 +75,6 @@ function recipeFactory (data) {
                 // }
             }
             
-            
             line.append(strong, qte)
             ingredientList.appendChild(line)
         });      
@@ -124,15 +95,3 @@ function recipeFactory (data) {
 
     return {name, ingredients, time, description, getRecipeCardDOM }
 }
-
-function init() {
-    const container = document.querySelector('.recipeContainer')
-    recipes.forEach(recipe => {
-        let eachRecipe = recipeFactory (recipe)
-        let card = eachRecipe.getRecipeCardDOM()
-        container.appendChild(card)
-    }); 
-}
-
-init()
-  
