@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/style.css">
+        
+        <script src="https://kit.fontawesome.com/6b2f05754f.js" crossorigin="anonymous"></script>
+        
+        <title>Les Petits Plats</title>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+
+            <header class="row">
+                <img class="mx-auto d-block mt-4 mb-4" src="img/logo_lespetitsplats.png" width="300" alt="Les Petits Plats">
+            </header>
+                        
+            <div class="row">
+                <div class="col input-group input-group-lg mx-5 mb-4">
+                    <input class="form-control" id="search-input" type="text" name="search-input" placeholder="Rechercher un ingrédient, appareil, ustensile ou une recette">
+                    <div class="input-group-append">
+                        <span id="launch-search" class="input-group-text">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group ml-3 ml-md-5 mt-5">
+                <div class="dropdown">
+                    <button class="btn btn-primary btn-lg mx-2 tag-btn show" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ingrédients
+                        <span class="fas fa-chevron-down"></span>
+                    </button>
+                    <div class="dropdown-menu bg-primary mx-2 dropdown-choices" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Ingrédient</a>
+                        <a class="dropdown-item" href="#">Ingrédient</a>
+                        <a class="dropdown-item" href="#">Ingrédient</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button id="appliances-tag-btn" class="btn bg-green btn-lg mx-2 tag-btn show" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Appareils
+                        <span class="fas fa-chevron-down"></span>
+                    </button>
+                    <div class="dropdown-menu bg-green dropdown-choices" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Appareil</a>
+                        <a class="dropdown-item" href="#">Appareil</a>
+                        <a class="dropdown-item" href="#">Appareil</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button id="utensils-tag-btn" class="btn bg-orange btn-lg mx-2 tag-btn show" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ustensiles
+                        <span class="fas fa-chevron-down"></span>
+                    </button>
+                    <div class="dropdown-menu bg-orange dropdown-choices" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Ustensile</a>
+                        <a class="dropdown-item" href="#">Ustensile</a>
+                        <a class="dropdown-item" href="#">Ustensile</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- contenu Recipe Card DOM-->
+            <div class="recipeContainer">
+
+            </div>
+
+        </div>
+
+        <!-- scripts bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- scripts site -->
+        <script type="module" src="modules/recipes.js"></script>
+        <script type="module" src="script.js"></script>
+
+    </body>
+
+
+
+
+
+</html>

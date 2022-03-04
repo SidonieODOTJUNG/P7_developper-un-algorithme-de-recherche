@@ -1,0 +1,146 @@
+/************************/
+/************************/
+/*** barre recherche  ***/
+/************************/
+/************************/
+
+input[type="text"] {
+	border: none;
+	border-color: transparent;
+}
+
+#search-input, #launch-search {
+	background-color: #e7e7e7;
+	border: none;
+	height: 80px;
+}
+
+
+/************************/
+/************************/
+/******* dropdown  ******/
+/************************/
+/************************/
+
+.btn {
+	padding: 1.25rem;
+	font-weight: 500;
+}
+
+.bg-green, .bg-green input[type="text"] {
+	background-color: #00dca9;
+	color: white;
+}
+
+.bg-orange, .bg-orange input[type="text"] {
+	background-color: #ff5a47;
+	color: white;
+}
+
+.btn.bg-green:hover {
+	background-color: #00a881;
+}
+
+.btn.bg-orange:hover {
+	background-color: #ff2c14;
+}
+
+.btn:hover {
+	color: white;
+}
+
+.dropdown-choices {
+	display: none;
+}
+
+.fa-chevron-down {
+	margin-left: 1rem;
+	margin-top: .5rem;
+}
+
+.tag-btn {
+	display: flex;
+	justify-content: space-between;
+	color: white;
+}
+
+.dropdown-item {
+	color: white;
+}
+
+.dropdown-item:hover {
+	background-color: transparent;
+	color: #e7e7e7;
+}
+
+
+/* card recipe */
+
+.card {
+	width: 30%;
+	background-color: #E7E7E7;
+}
+
+.card-img-top {
+	/* penser à créer un content */
+	background-color: #c9bdbd;
+	color: #c9bdbd;
+	display: block;
+	min-height: 178px;
+}
+
+.clock-section {
+	gap: 10px;
+}
+
+.recipe-section {
+	font-size: 1rem;
+	width: 100%;
+}
+
+.ingredient-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+.list-section {
+	max-width: 45%;
+}
+
+.recipe-text {
+	width: 50%;
+	line-height: 1;
+}
+/************************/
+/************************/
+/**** version mobile  ****/
+/************************/
+/************************/
+
+@media all and (max-width: 768px) {
+	body {
+		margin: auto;
+		min-width: fit-content;
+	}
+
+	.btn-group {
+		flex-direction: column;
+	}
+
+	.btn {
+		font-size: 1rem;
+		padding: .5rem;
+		margin-bottom: .5rem;
+	}
+
+	.tag-search {
+		width: 100%;
+	}
+
+	.card-img-top {
+		width: 70%;
+		height: 50%;
+	}
+}
